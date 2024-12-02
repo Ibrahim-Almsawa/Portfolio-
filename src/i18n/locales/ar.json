@@ -1,0 +1,299 @@
+{
+  "timeline": {
+    "title": "مسيرتي",
+    "subtitle": "الطريق الذي قادني إلى هنا",
+    "events": {
+      "start": {
+        "title": "بداية رحلة تطوير الويب",
+        "description": "بدأت تعلم أساسيات تطوير الويب ووقعت في حب تطوير الواجهات الأمامية.",
+        "date": "٢٠٢٠",
+        "skills": ["HTML", "CSS", "JavaScript"]
+      },
+      "firstProject": {
+        "title": "أول مشروع للعملاء",
+        "description": "أكملت بنجاح أول مشروع للعملاء باستخدام Vue.js وتقنيات الويب الحديثة.",
+        "date": "٢٠٢١",
+        "skills": ["Vue.js", "TypeScript", "Tailwind CSS"]
+      },
+      "current": {
+        "title": "تطوير الواجهات الأمامية المتقدم",
+        "description": "التركيز على تطوير الواجهات الأمامية المتقدمة مع TypeScript والأطر الحديثة.",
+        "date": "٢٠٢٢ - الآن",
+        "skills": ["TypeScript", "React", "Angular"]
+      }
+    }
+  },
+  "home": {
+    "greeting": "مرحباً، أنا إبراهيم",
+    "role": "مطور واجهات أمامية",
+    "description": "أقوم بتصميم تجارب ويب جميلة وعالية الأداء باستخدام التقنيات الحديثة. متخصص في Vue.js و TypeScript والتصميم المتجاوب.",
+    "viewProjects": "عرض المشاريع",
+    "contactMe": "تواصل معي",
+    "stats": {
+      "projectsCompleted": "مشروع منجز",
+      "happyClients": "عميل سعيد",
+      "yearsExperience": "سنوات خبرة",
+      "technologies": "تقنية"
+    }
+  },
+  "about": {
+    "title": "من أنا",
+    "subtitle": "مسيرتي ومهاراتي",
+    "description": {
+      "part1": "أنا مطور واجهات أمامية شغوف بالتصميم ولدي شغف لإنشاء تجارب مستخدم سلسة. بدأت رحلتي في تطوير الويب منذ 3 سنوات، ومنذ ذلك الحين وأنا أصمم تجارب رقمية جميلة.",
+      "part2": "أتخصص في تقنيات الواجهة الأمامية الحديثة مثل Vue.js وTypeScript وTailwind CSS. يجمع نهجي بين الخبرة التقنية وحل المشكلات بشكل إبداعي لبناء تطبيقات ويب متجاوبة وبديهية."
+    },
+    "downloadCV": "تحميل السيرة الذاتية",
+    "social": {
+      "github": "حساب جيت هب",
+      "linkedin": "حساب لينكد إن",
+      "twitter": "حساب تويتر",
+      "email": "راسلني"
+    },
+    "skills": {
+      "frontend": "تطوير الواجهة الأمامية",
+      "backend": "تطوير الخلفية",
+      "tools": "أدوات التطوير",
+      "design": "تصميم واجهة المستخدم"
+    },
+    "technicalSkills": "المهارات التقنية",
+    "skills": {
+      "vuejs": {
+        "name": "Vue.js",
+        "description": "بناء تطبيقات ويب قابلة للتطوير والصيانة"
+      },
+      "typescript": {
+        "name": "TypeScript",
+        "description": "تطوير آمن الأنواع مع جافاسكريبت الحديثة"
+      },
+      "htmlcss": {
+        "name": "HTML/CSS",
+        "description": "ترميز دلالي وميزات CSS حديثة"
+      },
+      "tailwind": {
+        "name": "Tailwind CSS",
+        "description": "إطار CSS للتطوير السريع"
+      },
+      "javascript": {
+        "name": "JavaScript",
+        "description": "ميزات ES6+ وأفضل الممارسات الحديثة"
+      },
+      "git": {
+        "name": "Git",
+        "description": "التحكم بالإصدارات والتعاون"
+      }
+    }
+  },
+  "skills": {
+    "title": "مهاراتي",
+    "subtitle": "التقنيات والأدوات التي أعمل بها",
+    "categories": {
+      "frontend": {
+        "title": "تطوير الواجهة الأمامية",
+        "description": "بناء واجهات مستخدم تفاعلية ومتجاوبة باستخدام تقنيات الويب الحديثة"
+      },
+      "backend": {
+        "title": "تطوير الخلفية",
+        "description": "إنشاء تطبيقات وواجهات برمجة قوية على جانب الخادم"
+      },
+      "design": {
+        "title": "تصميم واجهة المستخدم",
+        "description": "تصميم تجارب مستخدم جميلة وسهلة الاستخدام"
+      },
+      "tools": {
+        "title": "أدوات التطوير",
+        "description": "استخدام أدوات احترافية لسير عمل تطويري فعال"
+      }
+    },
+    "skillsList": {
+      "vuejs": {
+        "name": "Vue.js",
+        "level": "متقدم",
+        "description": "بناء تطبيقات ويب أحادية الصفحة قابلة للتطوير"
+      },
+      "javascript": {
+        "name": "JavaScript",
+        "level": "متقدم",
+        "description": "تطوير تطبيقات ويب تفاعلية وديناميكية"
+      },
+      "html": {
+        "name": "HTML",
+        "level": "متقدم",
+        "description": "بناء هيكل صفحات الويب بشكل معياري"
+      },
+      "css": {
+        "name": "CSS",
+        "level": "متقدم",
+        "description": "تصميم وتنسيق واجهات المستخدم"
+      },
+      "react": {
+        "name": "React",
+        "level": "متوسط",
+        "description": "إنشاء مكونات واجهة مستخدم تفاعلية"
+      },
+      "typescript": {
+        "name": "TypeScript",
+        "level": "متقدم",
+        "description": "كتابة كود جافاسكريبت آمن النوع"
+      },
+      "node": {
+        "name": "Node.js",
+        "level": "متوسط",
+        "description": "تطوير جافاسكريبت على جانب الخادم"
+      },
+      "tailwind": {
+        "name": "Tailwind CSS",
+        "level": "متقدم",
+        "description": "إطار عمل CSS قائم على الفائدة"
+      },
+      "figma": {
+        "name": "Figma",
+        "level": "متوسط",
+        "description": "تصميم ونماذج واجهة المستخدم"
+      },
+      "git": {
+        "name": "Git",
+        "level": "متقدم",
+        "description": "التحكم بالإصدارات والتعاون"
+      },
+      "docker": {
+        "name": "Docker",
+        "level": "متوسط",
+        "description": "الحوسبة والنشر"
+      },
+      "sass": {
+        "name": "Sass",
+        "level": "متقدم",
+        "description": "كتابة أنماط CSS متقدمة وقابلة للصيانة"
+      },
+      "webpack": {
+        "name": "Webpack",
+        "level": "متوسط",
+        "description": "حزم وإدارة أصول تطبيقات الويب"
+      },
+      "mysql": {
+        "name": "MySQL",
+        "level": "متوسط",
+        "description": "إدارة قواعد البيانات العلائقية"
+      },
+      "mongodb": {
+        "name": "MongoDB",
+        "level": "متوسط",
+        "description": "إدارة قواعد البيانات غير العلائقية"
+      }
+    }
+  },
+  "projects": {
+    "title": "مشاريعي",
+    "subtitle": "مجموعة من أحدث أعمالي ومشاريعي الخاصة",
+    "categories": {
+      "all": "الكل",
+      "web": "الويب",
+      "mobile": "الجوال",
+      "desktop": "سطح المكتب"
+    },
+    "links": {
+      "viewLive": "عرض المشروع",
+      "github": "جيت هب"
+    },
+    "projectsList": {
+      "portfolio": {
+        "title": "الموقع الشخصي",
+        "description": "موقع شخصي حديث مبني باستخدام Vue 3 و TypeScript و Tailwind CSS.",
+        "technologies": ["Vue", "TypeScript", "Tailwind"]
+      },
+      "taskApp": {
+        "title": "تطبيق إدارة المهام",
+        "description": "تطبيق تعاوني لإدارة المهام مع تحديثات فورية وميزات تعاون الفريق.",
+        "technologies": ["React", "Firebase", "Tailwind CSS", "TypeScript"]
+      },
+      "weather": {
+        "title": "لوحة معلومات الطقس",
+        "description": "لوحة معلومات للطقس توفر بيانات الطقس في الوقت الفعلي والتنبؤات باستخدام واجهات برمجة تطبيقات الطقس المتعددة.",
+        "technologies": ["Vue.js", "OpenWeather API", "Chart.js"]
+      },
+      "fitness": {
+        "title": "تطبيق تتبع اللياقة البدنية",
+        "description": "تطبيق جوال لتتبع التمارين والتغذية وتقدم اللياقة البدنية مع توصيات مخصصة.",
+        "technologies": ["React Native", "Redux", "Node.js", "MongoDB"]
+      },
+      "portfolio2": {
+        "title": "موقع المحفظة",
+        "description": "موقع محفظة حديث مبني باستخدام Vue.js و Tailwind CSS، يتميز بالوضع المظلم والرسوم المتحركة.",
+        "technologies": ["Vue.js", "Tailwind CSS", "TypeScript", "Vite"]
+      },
+      "apiGateway": {
+        "title": "خدمة بوابة API",
+        "description": "خدمة بوابة API قابلة للتطوير مع المصادقة وتحديد المعدل والتحقق من صحة الطلب.",
+        "technologies": ["Node.js", "Express", "Redis", "Docker"]
+      }
+    }
+  },
+  "contact": {
+    "title": "تواصل معي",
+    "subtitle": "لنعمل معاً",
+    "description": "هل لديك مشروع في ذهنك؟ أود أن أسمع عنه. أرسل لي رسالة ولنبدع شيئاً رائعاً معاً.",
+    "form": {
+      "name": {
+        "label": "الاسم",
+        "placeholder": "اسمك",
+        "error": "يرجى إدخال اسمك"
+      },
+      "email": {
+        "label": "البريد الإلكتروني",
+        "placeholder": "بريدك@example.com",
+        "error": "يرجى إدخال بريد إلكتروني صحيح"
+      },
+      "subject": {
+        "label": "الموضوع",
+        "placeholder": "ما موضوع رسالتك؟",
+        "error": "يرجى إدخال الموضوع"
+      },
+      "message": {
+        "label": "الرسالة",
+        "placeholder": "أخبرني عن مشروعك...",
+        "error": "يرجى إدخال رسالتك"
+      },
+      "submit": "إرسال الرسالة",
+      "sending": "جاري الإرسال...",
+      "success": "تم إرسال الرسالة بنجاح!",
+      "error": "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى."
+    },
+    "contactInfo": {
+      "title": "معلومات التواصل",
+      "description": "يمكنك التواصل معي عبر أي من هذه القنوات:",
+      "email": {
+        "title": "البريد الإلكتروني",
+        "description": "راسلني في أي وقت"
+      },
+      "social": {
+        "title": "وسائل التواصل الاجتماعي",
+        "description": "تواصل معي على وسائل التواصل الاجتماعي",
+        "linkedin": "لينكد إن",
+        "github": "جيت هب",
+        "twitter": "تويتر"
+      },
+      "location": {
+        "title": "الموقع",
+        "description": "مقيم في الأردن"
+      },
+      "availability": {
+        "title": "متاح حالياً",
+        "description": "متاح للمشاريع المستقلة والتعاون"
+      }
+    }
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "about": "من أنا",
+    "projects": "المشاريع",
+    "skills": "المهارات",
+    "contact": "تواصل معي"
+  },
+  "sidebar": {
+    "availableForWork": "متاح للعمل",
+    "role": "مطور واجهات أمامية",
+    "toggleSidebar": "تبديل الشريط الجانبي",
+    "profile": "الملف الشخصي"
+  }
+}

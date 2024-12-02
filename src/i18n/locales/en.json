@@ -1,0 +1,325 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "timeline": {
+    "title": "My Journey",
+    "subtitle": "The path that led me here",
+    "events": {
+      "start": {
+        "title": "Started Web Development Journey",
+        "description": "Began learning web development fundamentals and fell in love with frontend development.",
+        "date": "2020",
+        "skills": ["HTML", "CSS", "JavaScript"]
+      },
+      "firstProject": {
+        "title": "First Client Project",
+        "description": "Successfully completed my first client project using Vue.js and modern web technologies.",
+        "date": "2021",
+        "skills": ["Vue.js", "TypeScript", "Tailwind CSS"]
+      },
+      "current": {
+        "title": "Advanced Frontend Development",
+        "description": "Focusing on advanced frontend development with TypeScript and modern frameworks.",
+        "date": "2022 - Present",
+        "skills": ["TypeScript", "React", "Angular"]
+      }
+    }
+  },
+  "home": {
+    "greeting": "Hi, I'm Ibrahim",
+    "role": "Frontend Developer",
+    "description": "Crafting beautiful and performant web experiences with modern technologies. Specialized in Vue.js, TypeScript, and responsive design.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "stats": {
+      "projectsCompleted": "Projects Completed",
+      "happyClients": "Happy Clients",
+      "yearsExperience": "Years Experience",
+      "technologies": "Technologies"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "My Journey & Skills",
+    "description": {
+      "part1": "I'm a passionate frontend developer with a keen eye for design and a love for creating seamless user experiences. My journey in web development started 3 years ago, and I've been crafting beautiful digital experiences ever since.",
+      "part2": "I specialize in modern frontend technologies like Vue.js, TypeScript, and Tailwind CSS. My approach combines technical expertise with creative problem-solving to build responsive and intuitive web applications."
+    },
+    "downloadCV": "Download CV",
+    "social": {
+      "github": "GitHub Profile",
+      "linkedin": "LinkedIn Profile",
+      "twitter": "Twitter Profile",
+      "email": "Email Me"
+    },
+    "skills": {
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "tools": "Development Tools",
+      "design": "UI/UX Design"
+    },
+    "technicalSkills": "Technical Skills",
+    "skills": {
+      "vuejs": {
+        "name": "Vue.js",
+        "description": "Building scalable and maintainable web applications"
+      },
+      "typescript": {
+        "name": "TypeScript",
+        "description": "Type-safe development with modern JavaScript"
+      },
+      "htmlcss": {
+        "name": "HTML/CSS",
+        "description": "Semantic markup and modern CSS features"
+      },
+      "tailwind": {
+        "name": "Tailwind CSS",
+        "description": "Utility-first CSS for rapid development"
+      },
+      "javascript": {
+        "name": "JavaScript",
+        "description": "ES6+ features and modern best practices"
+      },
+      "git": {
+        "name": "Git",
+        "description": "Version control and collaboration"
+      }
+    }
+  },
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "Technologies & Tools I Work With",
+    "categories": {
+      "frontend": {
+        "title": "Frontend Development",
+        "description": "Building responsive and interactive user interfaces"
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "Creating robust server-side solutions"
+      },
+      "design": {
+        "title": "UI/UX Design",
+        "description": "Crafting beautiful and intuitive user experiences"
+      },
+      "tools": {
+        "title": "Development Tools",
+        "description": "Tools and technologies I use daily"
+      }
+    },
+    "items": {
+      "vue": {
+        "name": "Vue.js",
+        "description": "Modern frontend framework for building user interfaces"
+      },
+      "react": {
+        "name": "React",
+        "description": "Component-based UI development"
+      },
+      "typescript": {
+        "name": "TypeScript",
+        "description": "Type-safe JavaScript development"
+      },
+      "tailwind": {
+        "name": "Tailwind CSS",
+        "description": "Utility-first CSS framework"
+      },
+      "node": {
+        "name": "Node.js",
+        "description": "Server-side JavaScript runtime"
+      },
+      "git": {
+        "name": "Git",
+        "description": "Version control system"
+      }
+    },
+    "skillsList": {
+      "vuejs": {
+        "name": "Vue.js",
+        "level": "Advanced",
+        "description": "Building scalable single-page applications"
+      },
+      "javascript": {
+        "name": "JavaScript",
+        "level": "Advanced",
+        "description": "Developing interactive and dynamic web applications"
+      },
+      "html": {
+        "name": "HTML",
+        "level": "Advanced",
+        "description": "Building semantic web page structures"
+      },
+      "css": {
+        "name": "CSS",
+        "level": "Advanced",
+        "description": "Styling and designing user interfaces"
+      },
+      "react": {
+        "name": "React",
+        "level": "Intermediate",
+        "description": "Creating interactive UI components"
+      },
+      "typescript": {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "description": "Writing type-safe JavaScript code"
+      },
+      "node": {
+        "name": "Node.js",
+        "level": "Intermediate",
+        "description": "Server-side JavaScript development"
+      },
+      "tailwind": {
+        "name": "Tailwind CSS",
+        "level": "Advanced",
+        "description": "Utility-first CSS framework"
+      },
+      "figma": {
+        "name": "Figma",
+        "level": "Intermediate",
+        "description": "UI/UX design and prototyping"
+      },
+      "git": {
+        "name": "Git",
+        "level": "Advanced",
+        "description": "Version control and collaboration"
+      },
+      "docker": {
+        "name": "Docker",
+        "level": "Intermediate",
+        "description": "Containerization and deployment"
+      },
+      "sass": {
+        "name": "Sass",
+        "level": "Advanced",
+        "description": "Writing maintainable and advanced CSS styles"
+      },
+      "webpack": {
+        "name": "Webpack",
+        "level": "Intermediate",
+        "description": "Bundling and managing web application assets"
+      },
+      "mysql": {
+        "name": "MySQL",
+        "level": "Intermediate",
+        "description": "Managing relational databases"
+      },
+      "mongodb": {
+        "name": "MongoDB",
+        "level": "Intermediate",
+        "description": "Managing non-relational databases"
+      }
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Here's a collection of my recent work and side projects",
+    "categories": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile",
+      "desktop": "Desktop"
+    },
+    "links": {
+      "viewLive": "View Live",
+      "github": "GitHub"
+    },
+    "projectsList": {
+      "portfolio": {
+        "title": "Personal Portfolio",
+        "description": "A modern portfolio website built with Vue 3, TypeScript, and Tailwind CSS.",
+        "technologies": ["Vue", "TypeScript", "Tailwind"]
+      },
+      "taskApp": {
+        "title": "Task Management App",
+        "description": "A collaborative task management application with real-time updates and team collaboration features.",
+        "technologies": ["React", "Firebase", "Tailwind CSS", "TypeScript"]
+      },
+      "weather": {
+        "title": "Weather Dashboard",
+        "description": "A weather dashboard that provides real-time weather data and forecasts using multiple weather APIs.",
+        "technologies": ["Vue.js", "OpenWeather API", "Chart.js"]
+      },
+      "fitness": {
+        "title": "Fitness Tracking App",
+        "description": "A mobile app for tracking workouts, nutrition, and fitness progress with personalized recommendations.",
+        "technologies": ["React Native", "Redux", "Node.js", "MongoDB"]
+      },
+      "portfolio2": {
+        "title": "Portfolio Website",
+        "description": "A modern portfolio website built with Vue.js and Tailwind CSS, featuring dark mode and animations.",
+        "technologies": ["Vue.js", "Tailwind CSS", "TypeScript", "Vite"]
+      },
+      "apiGateway": {
+        "title": "API Gateway Service",
+        "description": "A scalable API gateway service with authentication, rate limiting, and request validation.",
+        "technologies": ["Node.js", "Express", "Redis", "Docker"]
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Let's Work Together",
+    "description": "Have a project in mind? I'd love to hear about it. Send me a message and let's create something amazing together.",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name",
+        "error": "Please enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "your.email@example.com",
+        "error": "Please enter a valid email address"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "What's your message about?",
+        "error": "Please enter a subject"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell me about your project...",
+        "error": "Please enter your message"
+      },
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "description": "Feel free to reach out through any of these channels:",
+      "email": {
+        "title": "Email",
+        "description": "Drop me a line anytime"
+      },
+      "social": {
+        "title": "Social Media",
+        "description": "Connect with me on social media",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "twitter": "Twitter"
+      },
+      "location": {
+        "title": "Location",
+        "description": "Based in Jordan"
+      },
+      "availability": {
+        "title": "Currently Available",
+        "description": "Open for freelance projects and collaborations"
+      }
+    }
+  },
+  "sidebar": {
+    "availableForWork": "Available for work",
+    "role": "Frontend Developer",
+    "toggleSidebar": "Toggle Sidebar",
+    "profile": "Profile"
+  }
+}
