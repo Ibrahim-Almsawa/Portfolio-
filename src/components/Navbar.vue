@@ -14,10 +14,8 @@
           @click="toggleSidebar"
           class="absolute top-4 z-10 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
           :class="{ 
-            'right-4': isOpen && locale === 'en',
-            'left-4': !isOpen && locale === 'en',
-            'left-4': isOpen && locale === 'ar',
-            'right-4': !isOpen && locale === 'ar'
+            'right-4': (isOpen && locale === 'en') || (!isOpen && locale === 'ar'),
+            'left-4': (!isOpen && locale === 'en') || (isOpen && locale === 'ar')
           }"
           :aria-label="$t('sidebar.toggleSidebar')"
         >
@@ -79,8 +77,7 @@
                     ? 'bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-600 dark:text-blue-400'
                     : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700',
                   { 
-                    'justify-start': locale === 'ar' && isOpen,
-                    'justify-start': locale === 'en' && isOpen,
+                    'justify-start': isOpen,
                     'justify-center': !isOpen
                   }
                 ]"
@@ -141,7 +138,7 @@
                 @click="toggleTheme"
                 class="p-2 rounded-lg transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700"
               >
-                <SunIcon v-if="isDarkMode" class="w-6 h-6 text-gray-700 dark:text-gray-300" />
+                <SunIcon v-if="isDark" class="w-6 h-6 text-gray-700 dark:text-gray-300" />
                 <MoonIcon v-else class="w-6 h-6 text-gray-700 dark:text-gray-300" />
               </button>
 
@@ -162,7 +159,7 @@
               @click="toggleTheme"
               class="p-2 rounded-lg transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-700"
             >
-              <SunIcon v-if="isDarkMode" class="w-5 h-5 text-gray-600 dark:text-gray-300" />
+              <SunIcon v-if="isDark" class="w-5 h-5 text-gray-600 dark:text-gray-300" />
               <MoonIcon v-else class="w-5 h-5 text-gray-600 dark:text-gray-300" />
             </button>
 
@@ -203,50 +200,42 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import {
   HomeIcon,
   UserIcon,
-  LightBulbIcon,
-  BriefcaseIcon,
+  WrenchScrewdriverIcon,
+  DocumentTextIcon,
   EnvelopeIcon,
   SunIcon,
   MoonIcon,
-  Bars3Icon,
-  XMarkIcon,
+  LanguageIcon,
   ChevronRightIcon,
-  LanguageIcon
+  XMarkIcon
 } from '@heroicons/vue/24/outline'
 
-const route = useRoute()
 const { locale } = useI18n()
-const isDarkMode = ref(false)
-const isOpen = ref(true) // Default to open on desktop
-const currentLocale = ref(locale.value)
+const isOpen = ref(true)
+const isDark = ref(false)
 
+// Navigation items
 const navigationItems = [
   { name: 'nav.home', path: '/', icon: HomeIcon },
   { name: 'nav.about', path: '/about', icon: UserIcon },
-  { name: 'nav.skills', path: '/skills', icon: LightBulbIcon },
-  { name: 'nav.projects', path: '/projects', icon: BriefcaseIcon },
+  { name: 'nav.skills', path: '/skills', icon: WrenchScrewdriverIcon },
+  { name: 'nav.projects', path: '/projects', icon: DocumentTextIcon },
   { name: 'nav.contact', path: '/contact', icon: EnvelopeIcon }
 ]
 
-const isCurrentRoute = (path: string): boolean => {
-  return route.path === path
-}
-
 const toggleTheme = () => {
-  isDarkMode.value = !isDarkMode.value
+  isDark.value = !isDark.value
   document.documentElement.classList.toggle('dark')
-  localStorage.setItem('theme', isDarkMode.value ? 'dark' : 'light')
+  localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
 }
 
 const toggleLanguage = () => {
-  const newLocale = currentLocale.value === 'en' ? 'ar' : 'en'
+  const newLocale = locale.value === 'en' ? 'ar' : 'en'
   locale.value = newLocale
-  currentLocale.value = newLocale
   document.documentElement.dir = newLocale === 'ar' ? 'rtl' : 'ltr'
   localStorage.setItem('language', newLocale)
 }
@@ -259,22 +248,18 @@ onMounted(() => {
   // Check for saved theme preference
   const savedTheme = localStorage.getItem('theme')
   const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-
-  isDarkMode.value = savedTheme === 'dark' || (!savedTheme && systemPrefersDark)
   
-  if (isDarkMode.value) {
+  isDark.value = savedTheme === 'dark' || (!savedTheme && systemPrefersDark)
+  if (isDark.value) {
     document.documentElement.classList.add('dark')
   }
 
-  // Set initial sidebar state based on screen size
-  const isMobile = window.innerWidth < 768
-  isOpen.value = !isMobile
-
-  // Add window resize listener
-  window.addEventListener('resize', () => {
-    const isMobile = window.innerWidth < 768
-    isOpen.value = !isMobile
-  })
+  // Check for saved language preference
+  const savedLanguage = localStorage.getItem('language')
+  if (savedLanguage) {
+    locale.value = savedLanguage
+    document.documentElement.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr'
+  }
 })
 </script>
 

@@ -68,6 +68,7 @@
             <!-- Links -->
             <div class="flex gap-4">
               <a
+                v-if="project.link"
                 :href="project.link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -93,7 +94,6 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 
 interface Project {
   id: number
@@ -101,11 +101,10 @@ interface Project {
   description: string
   technologies: string[]
   image: string
-  link: string
   github: string
+  link?: string
   category: string
 }
-const { locale } = useI18n()
 
 const categories = ['All', 'Web', 'Mobile', 'Desktop']
 const selectedCategory = ref('All')

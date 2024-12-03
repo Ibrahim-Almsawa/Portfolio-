@@ -93,14 +93,13 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import {
-  CodeBracketIcon,
   CommandLineIcon,
-  CubeIcon,
-  ServerIcon,
-  PaintBrushIcon,
   WrenchScrewdriverIcon,
   WindowIcon,
-  ComputerDesktopIcon
+  CodeBracketIcon,
+  CubeIcon,
+  ServerIcon,
+  PaintBrushIcon
 } from '@heroicons/vue/24/outline'
 
 const { locale } = useI18n()
