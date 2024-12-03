@@ -4,13 +4,13 @@
       <!-- Header Section -->
       <div class="text-center mb-16">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-          <span class="block text-gray-900 dark:text-white">{{ $t('contact.title') }}</span>
+          <span class="block text-gray-900 dark:text-white">{{ t('contact.title') }}</span>
           <span class="block mt-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            {{ $t('contact.subtitle') }}
+            {{ t('contact.subtitle') }}
           </span>
         </h1>
         <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          {{ $t('contact.description') }}
+          {{ t('contact.description') }}
         </p>
       </div>
 
@@ -22,10 +22,10 @@
               <!-- Name Input -->
               <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  {{ $t('contact.form.name.label') }}
+                  {{ t('contact.form.name.label') }}
                 </label>
                 <div class="relative">
-                  <UserIcon class="absolute left-3 top-1/2 transform -translate-y-1/Now reduce the space in the sidebar as there is a large space between the menu items and the profile. Got it?2 w-5 h-5 text-gray-400" />
+                  <UserIcon class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                   <input
                     id="name"
                     v-model="formData.name"
@@ -40,7 +40,7 @@
                         ? 'border-green-500 focus:ring-green-500 focus:border-green-500'
                         : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500 focus:border-blue-500'
                     ]"
-                    :placeholder="$t('contact.form.name.placeholder')"
+                    :placeholder="t('contact.form.name.placeholder')"
                   />
                   <div class="absolute right-3 top-1/2 transform -translate-y-1/2">
                     <ExclamationCircleIcon
@@ -57,14 +57,14 @@
                   v-if="touched.name && getFieldError('name')"
                   class="mt-1 text-sm text-red-600 dark:text-red-400"
                 >
-                  {{ $t('contact.form.name.error') }}
+                  {{ t('contact.form.name.error') }}
                 </p>
               </div>
 
               <!-- Email Input -->
               <div>
                 <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  {{ $t('contact.form.email.label') }}
+                  {{ t('contact.form.email.label') }}
                 </label>
                 <div class="relative">
                   <EnvelopeIcon class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -82,7 +82,7 @@
                         ? 'border-green-500 focus:ring-green-500 focus:border-green-500'
                         : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500 focus:border-blue-500'
                     ]"
-                    :placeholder="$t('contact.form.email.placeholder')"
+                    :placeholder="t('contact.form.email.placeholder')"
                   />
                   <div class="absolute right-3 top-1/2 transform -translate-y-1/2">
                     <ExclamationCircleIcon
@@ -99,14 +99,14 @@
                   v-if="touched.email && getFieldError('email')"
                   class="mt-1 text-sm text-red-600 dark:text-red-400"
                 >
-                  {{ $t('contact.form.email.error') }}
+                  {{ t('contact.form.email.error') }}
                 </p>
               </div>
 
               <!-- Subject Input -->
               <div>
                 <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  {{ $t('contact.form.subject.label') }}
+                  {{ t('contact.form.subject.label') }}
                 </label>
                 <div class="relative">
                   <ChatBubbleLeftIcon class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -124,7 +124,7 @@
                         ? 'border-green-500 focus:ring-green-500 focus:border-green-500'
                         : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500 focus:border-blue-500'
                     ]"
-                    :placeholder="$t('contact.form.subject.placeholder')"
+                    :placeholder="t('contact.form.subject.placeholder')"
                   />
                   <div class="absolute right-3 top-1/2 transform -translate-y-1/2">
                     <ExclamationCircleIcon
@@ -141,14 +141,14 @@
                   v-if="touched.subject && getFieldError('subject')"
                   class="mt-1 text-sm text-red-600 dark:text-red-400"
                 >
-                  {{ $t('contact.form.subject.error') }}
+                  {{ t('contact.form.subject.error') }}
                 </p>
               </div>
 
               <!-- Message Input -->
               <div>
                 <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  {{ $t('contact.form.message.label') }}
+                  {{ t('contact.form.message.label') }}
                 </label>
                 <div class="relative">
                   <PencilSquareIcon class="absolute left-3 top-3 w-5 h-5 text-gray-400" />
@@ -166,7 +166,7 @@
                         ? 'border-green-500 focus:ring-green-500 focus:border-green-500'
                         : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500 focus:border-blue-500'
                     ]"
-                    :placeholder="$t('contact.form.message.placeholder')"
+                    :placeholder="t('contact.form.message.placeholder')"
                   ></textarea>
                   <div class="absolute right-3 top-3">
                     <ExclamationCircleIcon
@@ -183,7 +183,7 @@
                   v-if="touched.message && getFieldError('message')"
                   class="mt-1 text-sm text-red-600 dark:text-red-400"
                 >
-                  {{ $t('contact.form.message.error') }}
+                  {{ t('contact.form.message.error') }}
                 </p>
               </div>
             </div>
@@ -196,7 +196,7 @@
             >
               <div class="flex items-center justify-center">
                 <ArrowPathIcon v-if="isSubmitting" class="animate-spin -ml-1 mr-2 h-5 w-5 text-white" />
-                {{ isSubmitting ? $t('contact.form.sending') : $t('contact.form.submit') }}
+                {{ isSubmitting ? t('contact.form.sending') : t('contact.form.submit') }}
               </div>
             </button>
 
@@ -218,8 +218,8 @@
 
         <!-- Contact Information -->
         <div class="space-y-8">
-          <h3 class="text-2xl font-bold text-gray-900 dark:text-white">{{ $t('contact.contactInfo.title') }}</h3>
-          <p class="text-gray-600 dark:text-gray-300">{{ $t('contact.contactInfo.description') }}</p>
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white">{{ t('contact.contactInfo.title') }}</h3>
+          <p class="text-gray-600 dark:text-gray-300">{{ t('contact.contactInfo.description') }}</p>
 
           <!-- Contact Cards -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -230,8 +230,8 @@
                   <EnvelopeIcon class="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{ $t('contact.contactInfo.email.title') }}</h3>
-                  <p class="text-gray-600 dark:text-gray-300">{{ $t('contact.contactInfo.email.description') }}</p>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{ t('contact.contactInfo.email.title') }}</h3>
+                  <p class="text-gray-600 dark:text-gray-300">{{ t('contact.contactInfo.email.description') }}</p>
                 </div>
               </div>
             </div>
@@ -243,8 +243,8 @@
                   <MapPinIcon class="w-6 h-6 text-purple-600 dark:text-purple-400" />
                 </div>
                 <div>
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{ $t('contact.contactInfo.location.title') }}</h3>
-                  <p class="text-gray-600 dark:text-gray-300">{{ $t('contact.contactInfo.location.description') }}</p>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{ t('contact.contactInfo.location.title') }}</h3>
+                  <p class="text-gray-600 dark:text-gray-300">{{ t('contact.contactInfo.location.description') }}</p>
                 </div>
               </div>
             </div>
@@ -252,7 +252,7 @@
 
           <!-- Social Links -->
           <div class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">{{ $t('contact.contactInfo.social.title') }}</h3>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">{{ t('contact.contactInfo.social.title') }}</h3>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
               <a
                 v-for="social in socialLinks"
@@ -270,7 +270,7 @@
                   ]"
                 />
                 <span :class="['mt-2 text-sm text-gray-600 dark:text-gray-300 transition-colors duration-300', social.color]">
-                  {{ $t(`contact.contactInfo.social.${social.name.toLowerCase()}`) }}
+                  {{ t(`contact.contactInfo.social.${social.name.toLowerCase()}`) }}
                 </span>
               </a>
             </div>
@@ -284,8 +284,8 @@
                 <div class="absolute inset-0 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{ $t('contact.contactInfo.availability.title') }}</h3>
-                <p class="text-gray-600 dark:text-gray-300">{{ $t('contact.contactInfo.availability.description') }}</p>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{ t('contact.contactInfo.availability.title') }}</h3>
+                <p class="text-gray-600 dark:text-gray-300">{{ t('contact.contactInfo.availability.description') }}</p>
               </div>
             </div>
           </div>
@@ -298,6 +298,7 @@
 <script setup lang="ts">
 import { ref, reactive, computed } from 'vue'
 import { TransitionRoot } from '@headlessui/vue'
+import { useI18n } from 'vue-i18n'
 import {
   UserIcon,
   EnvelopeIcon,
@@ -310,6 +311,8 @@ import {
   CheckCircleIcon,
   ExclamationCircleIcon
 } from '@heroicons/vue/24/outline'
+
+const { t } = useI18n()
 
 interface FormData {
   name: string
@@ -346,27 +349,27 @@ const formErrors = computed(() => {
   const errors: FormError[] = []
   
   if (touched.name && !formData.name.trim()) {
-    errors.push({ field: 'name', message: $t('contact.form.name.error') })
+    errors.push({ field: 'name', message: t('contact.form.name.error') })
   } else if (touched.name && formData.name.length < 2) {
-    errors.push({ field: 'name', message: $t('contact.form.name.error') })
+    errors.push({ field: 'name', message: t('contact.form.name.error') })
   }
 
   if (touched.email && !formData.email) {
-    errors.push({ field: 'email', message: $t('contact.form.email.error') })
+    errors.push({ field: 'email', message: t('contact.form.email.error') })
   } else if (touched.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-    errors.push({ field: 'email', message: $t('contact.form.email.error') })
+    errors.push({ field: 'email', message: t('contact.form.email.error') })
   }
 
   if (touched.subject && !formData.subject.trim()) {
-    errors.push({ field: 'subject', message: $t('contact.form.subject.error') })
+    errors.push({ field: 'subject', message: t('contact.form.subject.error') })
   } else if (touched.subject && formData.subject.length < 5) {
-    errors.push({ field: 'subject', message: $t('contact.form.subject.error') })
+    errors.push({ field: 'subject', message: t('contact.form.subject.error') })
   }
 
   if (touched.message && !formData.message.trim()) {
-    errors.push({ field: 'message', message: $t('contact.form.message.error') })
+    errors.push({ field: 'message', message: t('contact.form.message.error') })
   } else if (touched.message && formData.message.length < 20) {
-    errors.push({ field: 'message', message: $t('contact.form.message.error') })
+    errors.push({ field: 'message', message: t('contact.form.message.error') })
   }
 
   return errors
@@ -419,7 +422,7 @@ const handleSubmit = async () => {
   if (formErrors.value.length > 0) {
     statusMessage.value = {
       type: 'error',
-      text: $t('contact.form.error')
+      text: t('contact.form.error')
     }
     return
   }
@@ -431,7 +434,7 @@ const handleSubmit = async () => {
     
     statusMessage.value = {
       type: 'success',
-      text: $t('contact.form.success')
+      text: t('contact.form.success')
     }
     
     formSubmitted.value = true
@@ -444,7 +447,7 @@ const handleSubmit = async () => {
   } catch (error) {
     statusMessage.value = {
       type: 'error',
-      text: $t('contact.form.error')
+      text: t('contact.form.error')
     }
   } finally {
     isSubmitting.value = false
