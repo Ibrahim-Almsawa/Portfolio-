@@ -36,7 +36,8 @@
               'justify-center lg:justify-start': currentLocale === 'en'
             }">
               <a 
-                href="#" 
+                :href="'/src/assets/CV/MY CV_ibrahim.pdf'" 
+                download="Ibrahim_Almsawa_CV.pdf"
                 class="group inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 <DocumentArrowDownIcon class="w-5 h-5 group-hover:animate-bounce" :class="{ 
@@ -77,7 +78,7 @@
           <div class="relative w-full h-full p-2">
             <div class="w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-800 border-4 border-white dark:border-gray-700">
               <img 
-                src="@/assets/profile-placeholder.svg"
+                src="@/assets/Snapchat-613910532.jpg"
                 alt="Profile"
                 class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
               />
@@ -128,7 +129,7 @@
             <!-- Progress Bar -->
             <div class="relative h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
               <div class="absolute top-0 bottom-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full transition-all duration-1000 ease-out group-hover:from-blue-500 group-hover:to-purple-500"
-                   :class="[
+                   :class="[ 
                      { 'animate-skillBar': isVisible },
                      currentLocale === 'ar' ? 'bg-gradient-to-l' : 'bg-gradient-to-r'
                    ]"
@@ -169,7 +170,7 @@
               
               <!-- Content Card -->
               <div class="group relative grid grid-cols-1 md:grid-cols-2 gap-8"
-                   :class="[
+                   :class="[ 
                      currentLocale === 'ar' ? 
                        (index % 2 === 0 ? 'md:text-left' : 'md:text-right') :
                        (index % 2 === 0 ? 'md:text-right' : 'md:text-left'),
@@ -177,7 +178,7 @@
                    ]">
                 
                 <!-- Date -->
-                <div :class="[
+                <div :class="[ 
                   'mb-4 md:mb-0',
                   index % 2 === 0 ? 'md:order-1' : 'md:order-2'
                 ]">
@@ -187,11 +188,11 @@
                 </div>
 
                 <!-- Content -->
-                <div :class="[
+                <div :class="[ 
                   'p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg timeline-card',
                   index % 2 === 0 ? 'md:order-2' : 'md:order-1'
                 ]">
-                  <div class="flex items-start" :class="[
+                  <div class="flex items-start" :class="[ 
                     'space-x-4',
                     { 'space-x-reverse': currentLocale === 'ar' },
                     { 'flex-row-reverse': currentLocale === 'ar' }
@@ -253,25 +254,25 @@ const socialLinks = [
   {
     name: 'github',
     icon: GithubIcon,
-    url: 'https://github.com/yourusername',
+    url: 'https://github.com/Ibrahim-Almsawa',
     color: 'hover:bg-gray-800'
   },
   {
     name: 'linkedin',
     icon: LinkedinIcon,
-    url: 'https://linkedin.com/in/yourusername',
+    url: 'https://linkedin.com/in/Ibrahim-Almsawa',
     color: 'hover:bg-blue-600'
   },
   {
     name: 'twitter',
     icon: TwitterIcon,
-    url: 'https://twitter.com/yourusername',
+    url: 'https://x.com/EbrahimMusawa',
     color: 'hover:bg-sky-500'
   },
   {
     name: 'email',
     icon: MailIcon,
-    url: 'mailto:your.email@example.com',
+    url: 'mailto:wwwi2024h@gmail.com',
     color: 'hover:bg-red-600'
   }
 ]

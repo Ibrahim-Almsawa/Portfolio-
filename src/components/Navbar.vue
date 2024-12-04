@@ -199,7 +199,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import {
   HomeIcon,
@@ -211,13 +211,20 @@ import {
   MoonIcon,
   LanguageIcon,
   ChevronRightIcon,
+  Bars3Icon ,
   XMarkIcon
 } from '@heroicons/vue/24/outline'
 
 const { locale } = useI18n()
-const isOpen = ref(true)
+const isOpen = ref(window.innerWidth >= 768)
 const isDark = ref(false)
+// Check if screen is mobile/small
+const isMobileScreen = () => window.innerWidth < 768 // 768px is typical mobile breakpoint
 
+// Watch for window resize
+const handleResize = () => {
+  isOpen.value = !isMobileScreen()
+}
 // Navigation items
 const navigationItems = [
   { name: 'nav.home', path: '/', icon: HomeIcon },
@@ -248,7 +255,8 @@ onMounted(() => {
   // Check for saved theme preference
   const savedTheme = localStorage.getItem('theme')
   const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-  
+  window.addEventListener('resize', handleResize)
+
   isDark.value = savedTheme === 'dark' || (!savedTheme && systemPrefersDark)
   if (isDark.value) {
     document.documentElement.classList.add('dark')
@@ -260,6 +268,10 @@ onMounted(() => {
     locale.value = savedLanguage
     document.documentElement.dir = savedLanguage === 'ar' ? 'rtl' : 'ltr'
   }
+})
+onUnmounted(() => {
+  // Clean up resize listener
+  window.removeEventListener('resize', handleResize)
 })
 </script>
 
@@ -292,5 +304,8 @@ onMounted(() => {
 
 .left-4 {
   left: 0.6rem;
+}
+.right-4 {
+  right: 0.6rem;
 }
 </style>

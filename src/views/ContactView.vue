@@ -225,7 +225,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <!-- Email Card -->
             <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <div class="flex items-start space-x-4">
+              <div class="flex items-start" :class="locale === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'">
                 <div class="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
                   <EnvelopeIcon class="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
@@ -238,7 +238,7 @@
 
             <!-- Location Card -->
             <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-              <div class="flex items-start space-x-4">
+              <div class="flex items-start" :class="locale === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'">
                 <div class="p-3 bg-purple-100 dark:bg-purple-900 rounded-lg">
                   <MapPinIcon class="w-6 h-6 text-purple-600 dark:text-purple-400" />
                 </div>
@@ -278,7 +278,7 @@
 
           <!-- Availability Status -->
           <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
-            <div class="flex items-center space-x-3">
+            <div class="flex items-center" :class="locale === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-3'">
               <div class="relative">
                 <div class="w-3 h-3 bg-green-400 rounded-full"></div>
                 <div class="absolute inset-0 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
@@ -312,7 +312,7 @@ import {
   ExclamationCircleIcon
 } from '@heroicons/vue/24/outline'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 interface FormData {
   name: string
@@ -329,6 +329,15 @@ interface FormError {
 interface StatusMessage {
   type: 'success' | 'error'
   text: string
+}
+
+interface SubmitFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  _subject: string;
+  _template: string;
 }
 
 const formData = reactive<FormData>({
@@ -394,19 +403,19 @@ const handleBlur = (field: keyof FormData) => {
 const socialLinks = [
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/yourusername',
+    url: 'https://linkedin.com/in/Ibrahim-Almsawa',
     icon: LinkIcon,
     color: 'hover:text-[#0A66C2]'
   },
   {
     name: 'GitHub',
-    url: 'https://github.com/yourusername',
+    url: 'https://github.com/Ibrahim-Almsawa',
     icon: CodeBracketIcon,
     color: 'hover:text-[#171515]'
   },
   {
     name: 'Twitter',
-    url: 'https://twitter.com/yourusername',
+    url: 'https://x.com/EbrahimMusawa',
     icon: ArrowPathIcon,
     color: 'hover:text-[#1DA1F2]'
   }
@@ -429,8 +438,28 @@ const handleSubmit = async () => {
 
   try {
     isSubmitting.value = true
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    
+    const submitData: SubmitFormData = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      _subject: `Portfolio Contact: ${formData.subject}`,
+      _template: 'table'
+    }
+
+    const response = await fetch('https://formsubmit.co/wwwi2021@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(submitData)
+    })
+
+    if (!response.ok) {
+      throw new Error('Failed to send message')
+    }
     
     statusMessage.value = {
       type: 'success',

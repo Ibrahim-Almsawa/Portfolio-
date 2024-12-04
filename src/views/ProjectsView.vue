@@ -110,64 +110,64 @@ const categories = ['All', 'Web', 'Mobile', 'Desktop']
 const selectedCategory = ref('All')
 
 const projects = ref<Project[]>([
-  {
-    id: 1,
-    title: 'Personal Portfolio',
-    description: 'A modern portfolio website built with Vue 3, TypeScript, and Tailwind CSS.',
-    technologies: ['Vue', 'TypeScript', 'Tailwind'],
-    image: '/projects/portfolio.jpg',
-    link: 'https://portfolio.example.com',
-    github: 'https://github.com/yourusername/portfolio',
-    category: 'Web'
-  },
+  // {
+  //   id: 1,
+  //   title: 'Personal Portfolio',
+  //   description: 'A modern portfolio website built with Vue 3, TypeScript, and Tailwind CSS.',
+  //   technologies: ['Vue', 'TypeScript', 'Tailwind'],
+  //   image: '/projects/portfolio.jpg',
+  //   link: 'https://portfolio.example.com',
+  //   github: 'https://github.com/yourusername/portfolio',
+  //   category: 'Web'
+  // },
   {
     id: 2,
     title: 'Task Management App',
     description: 'A collaborative task management application with real-time updates and team collaboration features.',
     technologies: ['React', 'Firebase', 'Tailwind CSS', 'TypeScript'],
-    image: '/projects/taskapp.jpg',
+    image: '/projects/Taskmanager.png',
     link: 'https://example.com/taskapp',
-    github: 'https://github.com/username/taskapp',
+    github: 'https://github.com/Ibrahim-Almsawa/Task-Manager',
     category: 'Web'
   },
-  {
-    id: 3,
-    title: 'Weather Dashboard',
-    description: 'A weather dashboard that provides real-time weather data and forecasts using multiple weather APIs.',
-    technologies: ['Vue.js', 'OpenWeather API', 'Chart.js'],
-    image: '/projects/weather.jpg',
-    link: 'https://example.com/weather',
-    github: 'https://github.com/username/weather',
-    category: 'Web'
-  },
+  // {
+  //   id: 3,
+  //   title: 'Weather Dashboard',
+  //   description: 'A weather dashboard that provides real-time weather data and forecasts using multiple weather APIs.',
+  //   technologies: ['Vue.js', 'OpenWeather API', 'Chart.js'],
+  //   image: '/projects/weather.jpg',
+  //   link: 'https://example.com/weather',
+  //   github: 'https://github.com/username/weather',
+  //   category: 'Web'
+  // },
   {
     id: 4,
-    title: 'Fitness Tracking App',
-    description: 'A mobile app for tracking workouts, nutrition, and fitness progress with personalized recommendations.',
-    technologies: ['React Native', 'Redux', 'Node.js', 'MongoDB'],
-    image: '/projects/fitness.jpg',
+    title: 'Memory-Game',
+    description: 'a Memory Game using Vue, Tailwind CSS, and TypeScript.',
+    technologies: ['vue', 'Tailwind CSS', 'TypeScript', ],
+    image: '/projects/Memory Game.png',
     link: 'https://example.com/fitness',
-    github: 'https://github.com/username/fitness',
-    category: 'Mobile'
+    github: 'https://github.com/Ibrahim-Almsawa/Memory-Game',
+    category: 'web'
   },
   {
     id: 5,
-    title: 'Portfolio Website',
-    description: 'A modern portfolio website built with Vue.js and Tailwind CSS, featuring dark mode and animations.',
-    technologies: ['Vue.js', 'Tailwind CSS', 'TypeScript', 'Vite'],
-    image: '/projects/portfolio.jpg',
+    title: 'E-commerce Website',
+    description: 'A complete e-commerce platform allowing users to browse products, manage their cart, and proceed to checkout with integrated payment solutions.',
+    technologies: ['react', 'Tailwind CSS', 'TypeScript', 'Vite'],
+    image: '/projects/E-commerce.png',
     link: 'https://example.com/portfolio',
-    github: 'https://github.com/username/portfolio',
+    github: 'https://github.com/Ibrahim-Almsawa/E-commerce',
     category: 'Web'
   },
   {
     id: 6,
-    title: 'API Gateway Service',
-    description: 'A scalable API gateway service with authentication, rate limiting, and request validation.',
-    technologies: ['Node.js', 'Express', 'Redis', 'Docker'],
-    image: '/projects/api.jpg',
-    github: 'https://github.com/username/api-gateway',
-    category: 'Desktop'
+    title: 'Vue Budget Tracker',
+    description: 'A professional budget and expense tracking application built with Vue 3, TypeScript, and modern web technologies.',
+    technologies: ['Vue', 'TypeScript', 'CSS', 'Vite'],
+    image: '/projects/Vue Budget Tracker.png',
+    github: 'https://github.com/Ibrahim-Almsawa/vue-budget-tracker',
+    category: 'Web'
   }
 ])
 
