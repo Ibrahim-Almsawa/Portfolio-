@@ -1,113 +1,109 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-    <div class="container mx-auto px-4 py-16">
+  <div class="min-h-screen bg-[#0A0F1C] dark:bg-[#0A0F1C] relative overflow-hidden">
+    <!-- Animated Background Grid -->
+    <div class="absolute inset-0">
+      <div class="grid-animation"></div>
+    </div>
+
+    <!-- Glowing Orbs -->
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+
+    <div class="container relative mx-auto px-4 py-16 z-10">
       <!-- Hero Section -->
-      <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-16">
         <!-- Left Content -->
-        <div class="flex-1" :class="{ 
-          'text-center lg:text-right': locale === 'ar',
-          'text-center lg:text-left': locale === 'en'
+        <div class="flex-1 glass-card p-8 lg:p-12" :class="{ 
+          'text-center lg:text-right order-2 lg:order-1': locale === 'ar',
+          'text-center lg:text-left order-2 lg:order-1': locale === 'en'
         }">
-          <div class="space-y-6">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold">
-              <span class="block text-gray-900 dark:text-white">{{ $t('home.greeting') }}</span>
-              <span class="block mt-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                {{ $t('home.role') }}
-              </span>
+          <!-- Status Badge -->
+          <div class="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-8">
+            <span class="pulse-dot"></span>
+            <span class="text-emerald-400 text-sm font-medium ml-2">{{ $t('home.available') }}</span>
+          </div>
+
+          <!-- Main Heading -->
+          <div class="space-y-6 mb-12">
+            <h1 class="text-5xl lg:text-7xl font-bold tracking-tight">
+              <span class="text-white">{{ $t('home.greeting') }}</span>
+              <div class="mt-4">
+                <span class="gradient-text">{{ $t('home.role') }}</span>
+              </div>
             </h1>
             
-            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl" :class="{
-              'lg:ml-auto': locale === 'ar',
-              'lg:mr-auto': locale === 'en'
-            }">
+            <p class="text-gray-400 text-lg leading-relaxed max-w-2xl">
               {{ $t('home.description') }}
             </p>
+          </div>
 
-            <!-- Tech Stack -->
-            <div class="flex flex-wrap gap-3" :class="{
-              'justify-center lg:justify-end': locale === 'ar',
-              'justify-center lg:justify-start': locale === 'en'
-            }">
-              <div v-for="tech in techStack" :key="tech.name"
-                   class="flex items-center px-4 py-2 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300 group">
-                <component 
-                  :is="tech.icon" 
-                  :class="[
-                    'w-5 h-5 text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400',
-                    locale === 'ar' ? 'ml-2' : 'mr-2'
-                  ]"
-                />
-                <span class="text-gray-800 dark:text-gray-200">{{ tech.name }}</span>
+          <!-- Tech Stack -->
+          <div class="tech-grid mb-12">
+            <div v-for="tech in techStack" :key="tech.name"
+                 class="tech-card group">
+              <div class="tech-icon">
+                <component :is="tech.icon" class="w-6 h-6" />
               </div>
+              <span class="tech-name">{{ tech.name }}</span>
+              <div class="tech-card-glow"></div>
             </div>
+          </div>
 
-            <!-- CTA Buttons -->
-            <div class="flex flex-wrap gap-4" :class="{
-              'justify-center lg:justify-end': locale === 'ar',
-              'justify-center lg:justify-start': locale === 'en'
-            }">
-              <router-link 
-                to="/projects"
-                class="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-300"
-              >
-                <FolderIcon class="w-5 h-5" :class="{ 'ml-2': locale === 'ar', 'mr-2': locale === 'en' }" />
-                {{ $t('home.viewProjects') }}
-              </router-link>
-              
-              <router-link 
-                to="/contact"
-                class="inline-flex items-center px-6 py-3 rounded-lg border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white transition-all duration-300"
-              >
-                <EnvelopeIcon class="w-5 h-5" :class="{ 'ml-2': locale === 'ar', 'mr-2': locale === 'en' }" />
-                {{ $t('home.contactMe') }}
-              </router-link>
-            </div>
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-6 justify-center lg:justify-start">
+            <router-link to="/projects" class="cta-button primary">
+              <FolderIcon class="w-5 h-5 mr-2" />
+              <span>{{ $t('home.viewProjects') }}</span>
+              <div class="cta-button-glow"></div>
+            </router-link>
+            
+            <router-link to="/contact" class="cta-button secondary">
+              <EnvelopeIcon class="w-5 h-5 mr-2" />
+              <span>{{ $t('home.contactMe') }}</span>
+              <div class="cta-button-glow"></div>
+            </router-link>
           </div>
         </div>
 
-        <!-- Right Content - Profile Image -->
-        <div class="relative w-64 h-64 lg:w-96 lg:h-96" :class="{
-          'lg:order-first': locale === 'ar',
-          'lg:order-last': locale === 'en'
-        }">
-          <!-- Animated Background -->
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full animate-pulse"></div>
-          
-          <!-- Profile Image -->
-          <div class="relative w-full h-full p-2">
-            <div class="w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-800 border-4 border-white dark:border-gray-700">
+        <!-- Right Content - Profile Section -->
+        <div class="profile-container order-1 lg:order-2">
+          <!-- Profile Frame -->
+          <div class="profile-frame">
+            <div class="profile-image-wrapper">
               <img 
                 src="@/assets/Snapchat-613910532.jpg"
                 alt="Profile"
-                class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
+                class="profile-image"
               />
             </div>
+            
+            <!-- Decorative Elements -->
+            <div class="decorative-circles">
+              <div class="circle circle-1"></div>
+              <div class="circle circle-2"></div>
+              <div class="circle circle-3"></div>
+            </div>
+            
+            <!-- Tech Particles -->
+            <div class="tech-particles">
+              <div v-for="i in 8" :key="i" class="particle"></div>
+            </div>
           </div>
-
-          <!-- Floating Elements -->
-          <div class="absolute -top-4 w-12 h-12 bg-yellow-400 rounded-lg animate-bounce delay-100"
-               :class="{ '-left-4': locale === 'ar', '-right-4': locale === 'en' }"></div>
-          <div class="absolute -bottom-4 w-8 h-8 bg-purple-500 rounded-full animate-bounce"
-               :class="{ '-right-4': locale === 'ar', '-left-4': locale === 'en' }"></div>
-          <div class="absolute top-1/2 w-6 h-6 bg-blue-500 rounded-lg animate-bounce delay-200"
-               :class="{ '-left-8': locale === 'ar', '-right-8': locale === 'en' }"></div>
         </div>
       </div>
 
       <!-- Stats Section -->
-      <div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8">
-        <div v-for="stat in localizedStats" :key="stat.label"
-             class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-          <component 
-            :is="stat.icon" 
-            class="w-8 h-8 mb-4 text-blue-600 dark:text-blue-400 mx-auto"
-          />
-          <div class="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-            {{ stat.value }}
+      <div class="stats-grid">
+        <div v-for="stat in localizedStats" :key="stat.label" class="stat-card">
+          <div class="stat-icon">
+            <component :is="stat.icon" />
           </div>
-          <div class="text-sm text-gray-600 dark:text-gray-400">
-            {{ stat.label }}
+          <div class="stat-content">
+            <span class="stat-value">{{ stat.value }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
           </div>
+          <div class="stat-card-glow"></div>
         </div>
       </div>
     </div>
@@ -153,26 +149,372 @@ const localizedStats = computed(() =>
 </script>
 
 <style scoped>
-.animate-bounce {
-  animation: bounce 2s infinite;
+/* Base Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
 }
 
-.delay-100 {
-  animation-delay: 100ms;
+/* Grid Animation Background */
+.grid-animation {
+  position: absolute;
+  inset: -100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
 }
 
-.delay-200 {
-  animation-delay: 200ms;
+@keyframes grid-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-10%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+/* Glowing Orbs */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.glow-orb-1 {
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: rgba(59, 130, 246, 0.15);
+  animation: float 8s ease-in-out infinite;
+}
+
+.glow-orb-2 {
+  bottom: -150px;
+  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: rgba(139, 92, 246, 0.15);
+  animation: float 10s ease-in-out infinite reverse;
+}
+
+.glow-orb-3 {
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: rgba(236, 72, 153, 0.1);
+  animation: float 12s ease-in-out infinite;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(to right, #60A5FA, #A78BFA, #F472B6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 8s ease infinite;
+  background-size: 200% auto;
+  display: inline-block;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Tech Grid */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.tech-icon {
+  color: #60A5FA;
+  transition: all 0.3s ease;
+}
+
+.tech-name {
+  color: #E5E7EB;
+  font-medium: 500;
+}
+
+.tech-card-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(96, 165, 250, 0.15), transparent 100px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tech-card:hover .tech-card-glow {
+  opacity: 1;
+}
+
+/* CTA Buttons */
+.cta-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.cta-button.primary {
+  background: linear-gradient(45deg, #3B82F6, #8B5CF6);
+  color: white;
+}
+
+.cta-button.secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+}
+
+.cta-button-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.15), transparent 100px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cta-button:hover .cta-button-glow {
+  opacity: 1;
+}
+
+/* Profile Section */
+.profile-container {
+  flex-shrink: 0;
+  width: 450px;
+  height: 450px;
+  position: relative;
+}
+
+.profile-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+/* Decorative Elements */
+.decorative-circles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.circle-1 {
+  width: 100%;
+  height: 100%;
+  animation: rotate 20s linear infinite;
+}
+
+.circle-2 {
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 15%;
+  animation: rotate 15s linear infinite reverse;
+}
+
+.circle-3 {
+  width: 40%;
+  height: 40%;
+  top: 30%;
+  left: 30%;
+  animation: rotate 10s linear infinite;
+}
+
+/* Tech Particles */
+.tech-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #60A5FA;
+  border-radius: 50%;
+  animation: particle-float 4s ease-in-out infinite;
+}
+
+.particle:nth-child(2n) {
+  background: #8B5CF6;
+  animation-delay: 1s;
+}
+
+.particle:nth-child(3n) {
+  background: #EC4899;
+  animation-delay: 2s;
+}
+
+/* Stats Grid */
+.stats-grid {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-icon {
+  color: #60A5FA;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
+
+.stat-label {
+  color: #9CA3AF;
+  font-size: 0.875rem;
+}
+
+/* Pulse Animation */
+.pulse-dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+}
+
+.pulse-dot::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #34D399;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #34D399;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out 0.3s infinite;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-20px, 20px); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes particle-float {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -20px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .profile-container {
+    width: 350px;
+    height: 350px;
   }
-  50% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    width: 280px;
+    height: 280px;
   }
 }
 </style>
