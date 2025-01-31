@@ -72,7 +72,7 @@
           <div class="profile-frame">
             <div class="profile-image-wrapper">
               <img 
-                src="@/assets/Snapchat-613910532.jpg"
+                src="@/assets/profile-placeholder.svg"
                 alt="Profile"
                 class="profile-image"
               />
