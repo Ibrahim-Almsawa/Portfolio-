@@ -36,7 +36,7 @@
               'justify-center lg:justify-start': currentLocale === 'en'
             }">
               <a 
-                :href="'/src/assets/CV/MY CV_ibrahim.pdf'" 
+                href="/CV/Ibrahim_CV_ Curriculum Vitae.pdf"
                 download="Ibrahim_Almsawa_CV.pdf"
                 class="group inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >

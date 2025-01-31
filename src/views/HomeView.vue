@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-[#0A0F1C] dark:bg-[#0A0F1C] relative overflow-hidden">
+  <div class="min-h-screen bg-white dark:bg-[#0A0F1C] relative overflow-hidden">
     <!-- Animated Background Grid -->
     <div class="absolute inset-0">
       <div class="grid-animation"></div>
@@ -19,21 +19,21 @@
           'text-center lg:text-left order-2 lg:order-1': locale === 'en'
         }">
           <!-- Status Badge -->
-          <div class="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-8">
+          <div class="inline-flex items-center px-4 py-2 rounded-full bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 mb-8">
             <span class="pulse-dot"></span>
-            <span class="text-emerald-400 text-sm font-medium ml-2">{{ $t('home.available') }}</span>
+            <span class="text-emerald-600 dark:text-emerald-400 text-sm font-medium ml-2">{{ $t('home.available') }}</span>
           </div>
 
           <!-- Main Heading -->
           <div class="space-y-6 mb-12">
             <h1 class="text-5xl lg:text-7xl font-bold tracking-tight">
-              <span class="text-white">{{ $t('home.greeting') }}</span>
+              <span class="text-gray-800 dark:text-white">{{ $t('home.greeting') }}</span>
               <div class="mt-4">
                 <span class="gradient-text">{{ $t('home.role') }}</span>
               </div>
             </h1>
             
-            <p class="text-gray-400 text-lg leading-relaxed max-w-2xl">
+            <p class="text-gray-700 dark:text-gray-400 text-lg leading-relaxed max-w-2xl">
               {{ $t('home.description') }}
             </p>
           </div>
@@ -43,9 +43,9 @@
             <div v-for="tech in techStack" :key="tech.name"
                  class="tech-card group">
               <div class="tech-icon">
-                <component :is="tech.icon" class="w-6 h-6" />
+                <component :is="tech.icon" class="w-6 h-6 text-gray-800 dark:text-gray-200" />
               </div>
-              <span class="tech-name">{{ tech.name }}</span>
+              <span class="tech-name text-gray-900 dark:text-gray-100 font-semibold">{{ tech.name }}</span>
               <div class="tech-card-glow"></div>
             </div>
           </div>
@@ -151,10 +151,17 @@ const localizedStats = computed(() =>
 <style scoped>
 /* Base Styles */
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+:root.dark .glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: none;
 }
 
 /* Grid Animation Background */
@@ -162,15 +169,16 @@ const localizedStats = computed(() =>
   position: absolute;
   inset: -100%;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
   animation: grid-move 20s linear infinite;
 }
 
-@keyframes grid-move {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(50px, 50px); }
+:root.dark .grid-animation {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
 
 /* Glowing Orbs */
@@ -209,7 +217,7 @@ const localizedStats = computed(() =>
 
 /* Gradient Text */
 .gradient-text {
-  background: linear-gradient(to right, #60A5FA, #A78BFA, #F472B6);
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -232,21 +240,19 @@ const localizedStats = computed(() =>
 }
 
 .tech-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
 }
 
-.tech-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.1);
+:root.dark .tech-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .tech-icon {
@@ -255,8 +261,19 @@ const localizedStats = computed(() =>
 }
 
 .tech-name {
-  color: #E5E7EB;
-  font-medium: 500;
+  font-size: 1rem;
+  letter-spacing: 0.025em;
+}
+
+.tech-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+:root.dark .tech-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .tech-card-glow {
@@ -281,17 +298,15 @@ const localizedStats = computed(() =>
   font-weight: 500;
   transition: all 0.3s ease;
   overflow: hidden;
+  @apply text-gray-700 dark:text-white font-medium;
 }
 
 .cta-button.primary {
-  background: linear-gradient(45deg, #3B82F6, #8B5CF6);
-  color: white;
+  @apply bg-gradient-to-r from-blue-600 to-purple-600 text-white;
 }
 
 .cta-button.secondary {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
+  @apply bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-white border border-gray-200 dark:border-gray-700;
 }
 
 .cta-button:hover {
@@ -416,18 +431,16 @@ const localizedStats = computed(() =>
 }
 
 .stat-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 16px;
   transition: all 0.3s ease;
 }
 
-.stat-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.1);
+:root.dark .stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .stat-icon {
@@ -444,15 +457,15 @@ const localizedStats = computed(() =>
 }
 
 .stat-value {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: white;
-  line-height: 1;
+  @apply text-2xl font-bold text-gray-800 dark:text-white;
 }
 
 .stat-label {
-  color: #9CA3AF;
-  font-size: 0.875rem;
+  @apply text-sm text-gray-600 dark:text-gray-400;
+}
+
+.stat-icon {
+  @apply text-gray-700 dark:text-gray-300;
 }
 
 /* Pulse Animation */
