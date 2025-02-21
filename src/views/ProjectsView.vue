@@ -110,23 +110,23 @@ const categories = ['All', 'Web', 'Mobile', 'Desktop']
 const selectedCategory = ref('All')
 
 const projects = ref<Project[]>([
-  // {
-  //   id: 1,
-  //   title: 'Personal Portfolio',
-  //   description: 'A modern portfolio website built with Vue 3, TypeScript, and Tailwind CSS.',
-  //   technologies: ['Vue', 'TypeScript', 'Tailwind'],
-  //   image: '/projects/portfolio.jpg',
-  //   link: 'https://portfolio.example.com',
-  //   github: 'https://github.com/yourusername/portfolio',
-  //   category: 'Web'
-  // },
+  {
+    id: 1,
+    title: 'Educational Resources Directory',
+    description: 'A comprehensive directory of curated learning resources for programming and design, built with Astro.',
+    technologies: ['Astro', 'JavaScript', 'Tailwind'],
+    image: '/projects/Edu-Resources.png',
+    link: 'https://ibrahim-edu.netlify.app/',
+    github: 'https://github.com/Ibrahim-Almsawa/edu-resources',
+    category: 'Web'
+  },
   {
     id: 2,
     title: 'Task Management App',
     description: 'A collaborative task management application with real-time updates and team collaboration features.',
     technologies: ['React', 'Firebase', 'Tailwind CSS', 'TypeScript'],
     image: '/projects/Taskmanager.png',
-    link: 'https://example.com/taskapp',
+    link: 'https://task-manager-hima.netlify.app/',
     github: 'https://github.com/Ibrahim-Almsawa/Task-Manager',
     category: 'Web'
   },
@@ -146,7 +146,7 @@ const projects = ref<Project[]>([
     description: 'a Memory Game using Vue, Tailwind CSS, and TypeScript.',
     technologies: ['vue', 'Tailwind CSS', 'TypeScript', ],
     image: '/projects/Memory Game.png',
-    link: 'https://example.com/fitness',
+    link: 'https://hima-game.netlify.app/',
     github: 'https://github.com/Ibrahim-Almsawa/Memory-Game',
     category: 'web'
   },
@@ -166,6 +166,8 @@ const projects = ref<Project[]>([
     description: 'A professional budget and expense tracking application built with Vue 3, TypeScript, and modern web technologies.',
     technologies: ['Vue', 'TypeScript', 'CSS', 'Vite'],
     image: '/projects/Vue Budget Tracker.png',
+    link: 'https://vue-tracker-budget.netlify.app/',
+
     github: 'https://github.com/Ibrahim-Almsawa/vue-budget-tracker',
     category: 'Web'
   }
