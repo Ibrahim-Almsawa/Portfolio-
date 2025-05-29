@@ -220,6 +220,7 @@
   "projects": {
     "title": "My Projects",
     "subtitle": "Here's a collection of my recent work and side projects",
+    "description": "Here's a collection of my recent work and side projects",
     "categories": {
       "all": "All",
       "web": "Web",
