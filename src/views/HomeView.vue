@@ -136,7 +136,7 @@ const techStack = [
 const stats = [
   { key: 'projectsCompleted', value: '15+', icon: FolderIcon },
   { key: 'happyClients', value: '10+', icon: UserGroupIcon },
-  { key: 'yearsExperience', value: '3+', icon: ClockIcon },
+  { key: 'yearsExperience', value: '2+', icon: ClockIcon },
   { key: 'technologies', value: '10+', icon: CodeBracketIcon }
 ]
 
