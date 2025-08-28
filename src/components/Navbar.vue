@@ -41,7 +41,7 @@
               <img 
                 src="@/assets/IMG_20250806_103404_113.jpg" 
                 alt="Profile" 
-                class="relative w-24 h-24 rounded-full mx-auto border-4 border-white dark:border-gray-700 transform transition-all duration-300 group-hover:scale-105 group-hover:rotate-3"
+                class="relative w-24 h-24 rounded-full object-cover mx-auto border-4 border-white dark:border-gray-700 transform transition-all duration-300 group-hover:scale-105 group-hover:rotate-3"
               />
               <div class="absolute -bottom-1 -right-1 bg-green-500 w-4 h-4 rounded-full border-2 border-white dark:border-gray-700"></div>
             </div>
