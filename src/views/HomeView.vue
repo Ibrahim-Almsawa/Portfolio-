@@ -72,7 +72,7 @@
           <div class="profile-frame">
             <div class="profile-image-wrapper">
               <img 
-                src="@/assets/IMG_8775-copy.png"
+                src="@/assets/IMG_20250806_103404_113.jpg"
                 alt="Profile"
                 class="profile-image"
               />

@@ -78,7 +78,7 @@
           <div class="relative w-full h-full p-2">
             <div class="w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-800 border-4 border-white dark:border-gray-700">
               <img 
-                src="@/assets/IMG_8775-copy.png"
+                src="@/assets/IMG_20250806_103404_113.jpg"
                 alt="Profile"
                 class="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
               />

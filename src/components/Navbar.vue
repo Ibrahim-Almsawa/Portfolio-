@@ -39,7 +39,7 @@
             <div class="relative inline-block group cursor-pointer">
               <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-75 group-hover:opacity-100 transition-opacity"></div>
               <img 
-                src="@/assets/IMG_8775-copy2.png" 
+                src="@/assets/IMG_20250806_103404_113.jpg" 
                 alt="Profile" 
                 class="relative w-24 h-24 rounded-full mx-auto border-4 border-white dark:border-gray-700 transform transition-all duration-300 group-hover:scale-105 group-hover:rotate-3"
               />
