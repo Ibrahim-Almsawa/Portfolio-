@@ -13,11 +13,11 @@ const milestones = [
 <template>
   <section id="about" class="section-block about-section" tabindex="-1" aria-labelledby="about-title">
     <div class="shell about-grid">
-      <figure class="portrait">
+      <figure v-depth class="portrait">
         <img :src="portrait" :alt="$t('identity.name')" width="853" height="1280" loading="lazy" decoding="async">
         <figcaption><span>{{ $t('identity.name') }}</span><span class="text-mono">{{ $t('identity.location') }}</span></figcaption>
       </figure>
-      <div class="about-copy">
+      <div v-depth class="about-copy">
         <p class="section-label text-mono">{{ $t('nav.about') }}</p>
         <h2 id="about-title">{{ $t('about.title') }}<span>.</span></h2>
         <p>{{ $t('about.description') }}</p>

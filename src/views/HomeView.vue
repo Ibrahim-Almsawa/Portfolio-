@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ArrowDown, ArrowUpRight, Download, Github, Linkedin, MapPin } from 'lucide-vue-next'
-import HeroScene from '../components/HeroScene.vue'
+import FeaturedProjects from '../components/FeaturedProjects.vue'
 import ProjectsView from './ProjectsView.vue'
 import AboutView from './AboutView.vue'
 import SkillsView from './SkillsView.vue'
@@ -12,7 +12,7 @@ const cv = base + 'CV/Ibrahim_CV_ Curriculum Vitae.pdf'
 
 <template>
   <section class="shell hero" aria-labelledby="hero-title">
-    <div class="hero-copy">
+    <div v-depth class="hero-copy">
       <p class="availability text-mono"><span></span>{{ $t('identity.available') }}</p>
       <h1 id="hero-title">{{ $t('identity.first') }}<br>{{ $t('identity.last') }}<span>.</span></h1>
       <p class="hero-role">{{ $t('home.role') }}</p>
@@ -26,7 +26,7 @@ const cv = base + 'CV/Ibrahim_CV_ Curriculum Vitae.pdf'
         <a href="https://linkedin.com/in/Ibrahim-Almsawa" target="_blank" rel="noopener noreferrer"><Linkedin :size="16" aria-hidden="true" /> LinkedIn <ArrowUpRight :size="13" aria-hidden="true" /></a>
       </div>
     </div>
-    <HeroScene />
+    <FeaturedProjects v-depth />
   </section>
 
   <div class="shell hero-meta">

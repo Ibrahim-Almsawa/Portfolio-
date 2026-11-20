@@ -48,7 +48,7 @@ async function submit() {
 <template>
   <section id="contact" class="contact-section section-block" tabindex="-1" aria-labelledby="contact-title">
     <div class="shell contact-grid">
-      <div class="contact-copy">
+      <div v-depth class="contact-copy">
         <p class="section-label text-mono">{{ $t('nav.contact') }}</p>
         <h2 id="contact-title">{{ $t('contact.title') }}<span>.</span></h2>
         <p>{{ $t('contact.description') }}</p>
@@ -58,7 +58,7 @@ async function submit() {
         </div>
       </div>
 
-      <form class="contact-form" @submit.prevent="submit">
+      <form v-depth class="contact-form" @submit.prevent="submit">
         <div v-for="field in fields" :key="field.key" class="field" :class="{ 'field-wide': field.key === 'subject' }">
           <label :for="field.key">{{ $t('contact.fields.' + field.key) }}</label>
           <input :id="field.key" v-model.trim="form[field.key]" :name="field.key" :type="field.type"

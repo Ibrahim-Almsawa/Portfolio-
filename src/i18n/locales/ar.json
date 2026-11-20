@@ -25,8 +25,9 @@
     "description": "أطوّر واجهات ويب سريعة ومتجاوبة باستخدام Vue وReact وTypeScript.",
     "viewProjects": "تصفّح أعمالي",
     "stack": "التقنيات الأساسية",
-    "scene": "مجسّم ثلاثي الأبعاد",
-    "sceneHint": "حرّك المؤشر أو اسحب لاستكشافه"
+    "featured": "مشاريع مختارة",
+    "previousProject": "المشروع السابق",
+    "nextProject": "المشروع التالي"
   },
   "projects": {
     "title": "أعمال مختارة",

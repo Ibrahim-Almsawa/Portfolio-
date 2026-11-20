@@ -13,14 +13,16 @@ export default createRouter({
       redirect: { name: 'home', hash: '#' + section },
     })),
   ],
-  scrollBehavior(to, _from, savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     if (savedPosition) return savedPosition
+    const smooth = from.matched.length > 0 && !matchMedia('(prefers-reduced-motion: reduce)').matches
+    const behavior = smooth ? 'smooth' : 'instant'
     const target = to.hash && document.getElementById(to.hash.slice(1))
     if (target) {
       target.focus({ preventScroll: true })
       const top = parseFloat(getComputedStyle(target).scrollMarginTop)
-      return { el: target, top }
+      return { el: target, top, behavior }
     }
-    return { top: 0 }
+    return { top: 0, behavior }
   },
 })

@@ -25,8 +25,9 @@
     "description": "I build fast, responsive web interfaces with Vue, React, and TypeScript.",
     "viewProjects": "Explore my work",
     "stack": "Core stack",
-    "scene": "3D sculpture",
-    "sceneHint": "Move or drag to explore"
+    "featured": "Featured projects",
+    "previousProject": "Previous project",
+    "nextProject": "Next project"
   },
   "projects": {
     "title": "Selected work",

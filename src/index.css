@@ -364,108 +364,6 @@ h2 span {
   color: var(--highlight);
 }
 
-.scene-panel {
-  position: relative;
-  isolation: isolate;
-  min-width: 0;
-  min-height: 29rem;
-  overflow: hidden;
-  border: 1px solid #3a4330;
-  border-radius: 18px;
-  background: radial-gradient(
-    ellipse at 52% 40%,
-    #354223 0%,
-    #222a19 49%,
-    #1a2015 100%
-  );
-  color: #cde1a2;
-}
-.scene-grid {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(#b2cc9411 1px, transparent 1px),
-    linear-gradient(90deg, #b2cc9411 1px, transparent 1px);
-  background-size: 42px 42px;
-  background-position: center;
-  mask-image: radial-gradient(ellipse, #000, #000b);
-}
-.scene-orbit {
-  position: absolute;
-  inset: 15% 13%;
-  border-radius: 50%;
-  border: 1px dashed #c4e59c35;
-}
-.scene-orbit::before,
-.scene-orbit::after {
-  content: "";
-  position: absolute;
-  inset: 9%;
-  border: 1px solid #c4e59c23;
-  border-radius: inherit;
-}
-.scene-orbit::after {
-  inset: -8%;
-  border-style: dotted;
-}
-.scene-fallback {
-  position: absolute;
-  inset: 47.5% auto auto 53%;
-  width: 70%;
-  height: 74%;
-  object-fit: contain;
-  translate: -50% -50%;
-}
-.scene-canvas {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-}
-.scene-canvas canvas {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.scene-ready .scene-fallback {
-  visibility: hidden;
-}
-.scene-ready .scene-canvas {
-  opacity: 1;
-  touch-action: pan-y pinch-zoom;
-}
-.scene-label,
-.scene-hint {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  pointer-events: none;
-}
-.scene-label {
-  inset-block-start: 1.375rem;
-  inset-inline-start: 1.375rem;
-}
-.scene-hint {
-  inset-block-end: 1.375rem;
-  inset-inline-end: 1.375rem;
-  color: #c0cca9;
-}
-.scene-plus {
-  position: absolute;
-  inset-block-start: 1.125rem;
-  inset-inline-end: 1.375rem;
-  font: 400 1.375rem/1 var(--mono);
-  pointer-events: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  .scene-hint {
-    display: none;
-  }
-  .scene-ready .scene-canvas {
-    touch-action: auto;
-  }
-}
-
 .hero-meta {
   border-block: 1px solid var(--border);
   padding-block: 1rem;
@@ -912,9 +810,6 @@ h3 {
   .brand-name {
     display: none;
   }
-  .scene-panel {
-    min-height: 25rem;
-  }
   .skills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -965,10 +860,6 @@ h3 {
   .hero-socials {
     margin-block-start: 0.625rem;
   }
-  .scene-panel {
-    min-height: 0;
-    aspect-ratio: 1.16;
-  }
   .about-grid,
   .contact-grid {
     grid-template-columns: 1fr;
@@ -1013,10 +904,6 @@ h3 {
   }
   .contact-form {
     grid-template-columns: 1fr;
-  }
-  .scene-label,
-  .scene-hint {
-    font-size: 0.65rem;
   }
 }
 

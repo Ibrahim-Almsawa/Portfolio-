@@ -11,12 +11,12 @@ const groups = [
 
 <template>
   <section id="skills" class="shell section-block" tabindex="-1" aria-labelledby="skills-title">
-    <div class="section-heading">
+    <div v-depth class="section-heading">
       <p class="section-label text-mono">{{ $t('nav.skills') }}</p>
       <h2 id="skills-title">{{ $t('skills.title') }}<span>.</span></h2>
     </div>
     <div class="skills-grid">
-      <article v-for="group in groups" :key="group.id" class="skill-card">
+      <article v-for="group in groups" :key="group.id" v-depth class="skill-card">
         <component :is="group.icon" :size="24" class="skill-icon" aria-hidden="true" />
         <h3>{{ $t('skills.groups.' + group.id + '.title') }}</h3>
         <p>{{ $t('skills.groups.' + group.id + '.description') }}</p>
