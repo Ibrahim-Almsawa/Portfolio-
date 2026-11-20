@@ -9,10 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.7.23",
-    "@heroicons/vue": "^2.2.0",
-    "@vueuse/core": "^12.0.0",
-    "cursify": "^1.0.0",
     "lucide-vue-next": "^0.462.0",
     "vue": "^3.5.13",
     "vue-i18n": "^9.14.2",
@@ -20,12 +16,8 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.1",
-    "@types/vue-i18n": "^7.0.0",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.15",
     "typescript": "~5.6.2",
     "vite": "^6.0.1",
     "vue-tsc": "^2.1.10"

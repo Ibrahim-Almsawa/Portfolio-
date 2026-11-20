@@ -1,0 +1,29 @@
+:root {
+  --depth-ease: cubic-bezier(0.2, 0.72, 0.22, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes depth-arrive {
+    from {
+      opacity: 0.35;
+      transform: perspective(1050px) translate3d(0, 28px, -62px) rotateX(-11deg);
+    }
+  }
+
+  .depth-reveal, .project-depth-enter-active {
+    animation: depth-arrive 560ms var(--depth-ease) backwards;
+    transform-origin: center top;
+  }
+
+  .featured-projects.depth-reveal {
+    animation-delay: 70ms;
+  }
+
+  .depth-reveal:focus-within, .project-depth-enter-active:focus-within {
+    animation: none;
+  }
+
+  .project-depth-move {
+    transition: transform 360ms var(--depth-ease);
+  }
+}
