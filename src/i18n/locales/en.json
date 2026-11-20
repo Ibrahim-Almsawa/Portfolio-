@@ -1,327 +1,121 @@
 {
+  "identity": {
+    "name": "Ibrahim Almsawa",
+    "first": "Ibrahim",
+    "last": "Almsawa",
+    "available": "Available for work",
+    "location": "Based in Yemen"
+  },
   "nav": {
     "home": "Home",
+    "projects": "Work",
     "about": "About",
-    "projects": "Projects",
     "skills": "Skills",
-    "contact": "Contact"
+    "contact": "Contact",
+    "talk": "Let’s talk",
+    "label": "Main navigation",
+    "menu": "Navigation menu",
+    "light": "Switch to light theme",
+    "dark": "Switch to dark theme",
+    "back": "Back to top",
+    "skip": "Skip to content"
   },
-  "timeline": {
-    "title": "My Journey",
-    "subtitle": "The path that led me here",
-    "events": {
-      "start": {
-        "title": "Started Web Development Journey",
-        "description": "Began learning web development fundamentals and fell in love with frontend development.",
-        "date": "2020",
-        "skills": ["HTML", "CSS", "JavaScript"]
+  "home": {
+    "role": "Frontend Developer",
+    "description": "I build fast, responsive web interfaces with Vue, React, and TypeScript.",
+    "viewProjects": "Explore my work",
+    "stack": "Core stack",
+    "scene": "3D sculpture",
+    "sceneHint": "Move or drag to explore"
+  },
+  "projects": {
+    "title": "Selected work",
+    "filter": "Filter projects",
+    "count": "Projects shown: {count}",
+    "live": "Live demo",
+    "code": "Source code",
+    "categories": {
+      "all": "All work",
+      "apps": "Web apps",
+      "sites": "Websites",
+      "games": "Games"
+    },
+    "items": {
+      "budget": {
+        "title": "Vue Budget Tracker",
+        "description": "A personal finance dashboard for tracking income, expenses, and your remaining balance."
       },
-      "firstProject": {
-        "title": "First Client Project",
-        "description": "Successfully completed my first client project using Vue.js and modern web technologies.",
-        "date": "2021",
-        "skills": ["Vue.js", "TypeScript", "Tailwind CSS"]
+      "education": {
+        "title": "Educational Resources",
+        "description": "A curated directory of resources for learning programming and design."
       },
-      "current": {
-        "title": "Advanced Frontend Development",
-        "description": "Focusing on advanced frontend development with TypeScript and modern frameworks.",
-        "date": "2022 - Present",
-        "skills": ["TypeScript", "React", "Angular"]
+      "tasks": {
+        "title": "Task Manager",
+        "description": "A task management app built with React and Firebase for organizing work in one place."
+      },
+      "commerce": {
+        "title": "E-commerce",
+        "description": "A storefront for browsing products, managing a cart, and checking out."
+      },
+      "memory": {
+        "title": "Memory Game",
+        "description": "A browser-based card matching game built with Vue and TypeScript."
       }
     }
   },
-  "home": {
-    "greeting": "Hi, I'm Ibrahim",
-    "role": "Frontend Developer",
-    "description": "Crafting beautiful and performant web experiences with modern technologies. Specialized in Vue.js, TypeScript, and responsive design.",
-    "viewProjects": "View Projects",
-    "contactMe": "Contact Me",
-    "available": "Available",
-    "stats": {
-      "projectsCompleted": "Projects Completed",
-      "happyClients": "Happy Clients",
-      "yearsExperience": "Years Experience",
-      "technologies": "Technologies"
-    }
-  },
   "about": {
-    "title": "About Me",
-    "subtitle": "My Journey & Skills",
-    "description": {
-      "part1": "I'm a passionate frontend developer with a keen eye for design and a love for creating seamless user experiences. My journey in web development started 3 years ago, and I've been crafting beautiful digital experiences ever since.",
-      "part2": "I specialize in modern frontend technologies like Vue.js, TypeScript, and Tailwind CSS. My approach combines technical expertise with creative problem-solving to build responsive and intuitive web applications."
-    },
+    "title": "Behind the work",
+    "description": "I’m Ibrahim, a frontend developer based in Yemen. I work with Vue, TypeScript, and Tailwind CSS to turn ideas into responsive interfaces that feel clear and easy to use.",
     "downloadCV": "Download CV",
-    "social": {
-      "github": "GitHub Profile",
-      "linkedin": "LinkedIn Profile",
-      "twitter": "Twitter Profile",
-      "email": "Email Me"
-    },
-    "skills": {
-      "frontend": "Frontend Development",
-      "backend": "Backend Development",
-      "tools": "Development Tools",
-      "design": "UI/UX Design"
-    },
-    "technicalSkills": "Technical Skills",
-    "skills": {
-      "vuejs": {
-        "name": "Vue.js",
-        "description": "Building scalable and maintainable web applications"
+    "timeline": {
+      "start": {
+        "title": "Started learning web development",
+        "description": "Built my foundation in HTML, CSS, and JavaScript."
       },
-      "typescript": {
-        "name": "TypeScript",
-        "description": "Type-safe development with modern JavaScript"
+      "firstProject": {
+        "title": "Completed my first client project",
+        "description": "Put Vue.js to work on a client website."
       },
-      "htmlcss": {
-        "name": "HTML/CSS",
-        "description": "Semantic markup and modern CSS features"
-      },
-      "tailwind": {
-        "name": "Tailwind CSS",
-        "description": "Utility-first CSS for rapid development"
-      },
-      "javascript": {
-        "name": "JavaScript",
-        "description": "ES6+ features and modern best practices"
-      },
-      "git": {
-        "name": "Git",
-        "description": "Version control and collaboration"
+      "current": {
+        "title": "Focused on frontend development",
+        "description": "Expanded my work with TypeScript and component-based frameworks."
       }
     }
   },
   "skills": {
-    "title": "My Skills",
-    "subtitle": "Technologies & Tools I Work With",
-    "categories": {
+    "title": "My toolkit",
+    "groups": {
       "frontend": {
-        "title": "Frontend Development",
-        "description": "Building responsive and interactive user interfaces"
-      },
-      "backend": {
-        "title": "Backend Development",
-        "description": "Creating robust server-side solutions"
+        "title": "Frontend",
+        "description": "Responsive interfaces and component-based web apps."
       },
       "design": {
-        "title": "UI/UX Design",
-        "description": "Crafting beautiful and intuitive user experiences"
+        "title": "Interface design",
+        "description": "Prototyping and building consistent visual systems."
+      },
+      "backend": {
+        "title": "Backend & data",
+        "description": "Server-side JavaScript and relational and document databases."
       },
       "tools": {
-        "title": "Development Tools",
-        "description": "Tools and technologies I use daily"
-      }
-    },
-    "items": {
-      "vue": {
-        "name": "Vue.js",
-        "description": "Modern frontend framework for building user interfaces"
-      },
-      "react": {
-        "name": "React",
-        "description": "Component-based UI development"
-      },
-      "typescript": {
-        "name": "TypeScript",
-        "description": "Type-safe JavaScript development"
-      },
-      "tailwind": {
-        "name": "Tailwind CSS",
-        "description": "Utility-first CSS framework"
-      },
-      "node": {
-        "name": "Node.js",
-        "description": "Server-side JavaScript runtime"
-      },
-      "git": {
-        "name": "Git",
-        "description": "Version control system"
-      }
-    },
-    "skillsList": {
-      "vuejs": {
-        "name": "Vue.js",
-        "level": "Advanced",
-        "description": "Building scalable single-page applications"
-      },
-      "javascript": {
-        "name": "JavaScript",
-        "level": "Advanced",
-        "description": "Developing interactive and dynamic web applications"
-      },
-      "html": {
-        "name": "HTML",
-        "level": "Advanced",
-        "description": "Building semantic web page structures"
-      },
-      "css": {
-        "name": "CSS",
-        "level": "Advanced",
-        "description": "Styling and designing user interfaces"
-      },
-      "react": {
-        "name": "React",
-        "level": "Intermediate",
-        "description": "Creating interactive UI components"
-      },
-      "typescript": {
-        "name": "TypeScript",
-        "level": "Advanced",
-        "description": "Writing type-safe JavaScript code"
-      },
-      "node": {
-        "name": "Node.js",
-        "level": "Intermediate",
-        "description": "Server-side JavaScript development"
-      },
-      "tailwind": {
-        "name": "Tailwind CSS",
-        "level": "Advanced",
-        "description": "Utility-first CSS framework"
-      },
-      "figma": {
-        "name": "Figma",
-        "level": "Intermediate",
-        "description": "UI/UX design and prototyping"
-      },
-      "git": {
-        "name": "Git",
-        "level": "Advanced",
-        "description": "Version control and collaboration"
-      },
-      "docker": {
-        "name": "Docker",
-        "level": "Intermediate",
-        "description": "Containerization and deployment"
-      },
-      "sass": {
-        "name": "Sass",
-        "level": "Advanced",
-        "description": "Writing maintainable and advanced CSS styles"
-      },
-      "webpack": {
-        "name": "Webpack",
-        "level": "Intermediate",
-        "description": "Bundling and managing web application assets"
-      },
-      "mysql": {
-        "name": "MySQL",
-        "level": "Intermediate",
-        "description": "Managing relational databases"
-      },
-      "mongodb": {
-        "name": "MongoDB",
-        "level": "Intermediate",
-        "description": "Managing non-relational databases"
-      }
-    }
-  },
-  "projects": {
-    "title": "My Projects",
-    "subtitle": "Here's a collection of my recent work and side projects",
-    "description": "Here's a collection of my recent work and side projects",
-    "categories": {
-      "all": "All",
-      "web": "Web",
-      "mobile": "Mobile",
-      "desktop": "Desktop"
-    },
-    "links": {
-      "viewLive": "View Live",
-      "github": "GitHub"
-    },
-    "projectsList": {
-      "portfolio": {
-        "title": "Personal Portfolio",
-        "description": "A modern portfolio website built with Vue 3, TypeScript, and Tailwind CSS.",
-        "technologies": ["Vue", "TypeScript", "Tailwind"]
-      },
-      "taskApp": {
-        "title": "Task Management App",
-        "description": "A collaborative task management application with real-time updates and team collaboration features.",
-        "technologies": ["React", "Firebase", "Tailwind CSS", "TypeScript"]
-      },
-      "weather": {
-        "title": "Weather Dashboard",
-        "description": "A weather dashboard that provides real-time weather data and forecasts using multiple weather APIs.",
-        "technologies": ["Vue.js", "OpenWeather API", "Chart.js"]
-      },
-      "fitness": {
-        "title": "Fitness Tracking App",
-        "description": "A mobile app for tracking workouts, nutrition, and fitness progress with personalized recommendations.",
-        "technologies": ["React Native", "Redux", "Node.js", "MongoDB"]
-      },
-      "portfolio2": {
-        "title": "Portfolio Website",
-        "description": "A modern portfolio website built with Vue.js and Tailwind CSS, featuring dark mode and animations.",
-        "technologies": ["Vue.js", "Tailwind CSS", "TypeScript", "Vite"]
-      },
-      "apiGateway": {
-        "title": "API Gateway Service",
-        "description": "A scalable API gateway service with authentication, rate limiting, and request validation.",
-        "technologies": ["Node.js", "Express", "Redis", "Docker"]
+        "title": "Development tools",
+        "description": "Version control, builds, and containerized environments."
       }
     }
   },
   "contact": {
-    "title": "Get in Touch",
-    "subtitle": "Let's Work Together",
-    "description": "I'm always open to new opportunities and collaborations. Feel free to reach out!",
-    "form": {
-      "name": {
-        "label": "Your Name",
-        "placeholder": "Enter your name",
-        "error": "Name is required"
-      },
-      "email": {
-        "label": "Email Address",
-        "placeholder": "Enter your email",
-        "error": "Please enter a valid email"
-      },
-      "subject": {
-        "label": "Subject",
-        "placeholder": "What is this about?",
-        "error": "Subject is required"
-      },
-      "message": {
-        "label": "Message",
-        "placeholder": "Your message here...",
-        "error": "Message is required"
-      },
-      "submit": "Send Message",
-      "sending": "Sending..."
+    "title": "Let’s build something",
+    "description": "Have a project in mind or a role you’d like to discuss? Send me a message.",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message"
     },
-    "contactInfo": {
-      "title": "Contact Information",
-      "description": "Feel free to reach out through any of these channels:",
-      "email": {
-        "title": "Email",
-        "description": "Drop me a line anytime"
-      },
-      "location": {
-        "title": "Location",
-        "description": "Based in Yemen"
-      },
-      "social": {
-        "title": "Social Media",
-        "description": "Connect with me on social media",
-        "linkedin": "LinkedIn",
-        "github": "GitHub",
-        "twitter": "Twitter"
-      },
-      "availability": {
-        "title": "Currently Available",
-        "description": "Open for freelance projects and collaborations"
-      }
-    },
-    "success": "Message sent successfully!",
-    "error": "Error sending message. Please try again."
-  },
-  "sidebar": {
-    "availableForWork": "Available for work",
-    "role": "Frontend Developer",
-    "toggleSidebar": "Toggle Sidebar",
-    "profile": "Profile"
+    "send": "Send message",
+    "sending": "Sending…",
+    "success": "Your message was submitted.",
+    "invalid": "Check that each field has enough text before sending.",
+    "error": "The form couldn’t send your message. Try again or email me directly."
   }
 }
